@@ -1,0 +1,306 @@
+body{
+    text-align: center;
+    color: #EEEEEE;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(207, 207, 207);
+}
+.led{
+    border-radius: 45px;
+    width: 66px;
+    height: 66px;
+    background-image: url("lamp.png");
+    font-size: 8px;
+    border-color: #fff;
+    border-width: 1px;
+    font-family: Verdana;
+}
+.fan{
+    border-radius: 45px;
+    width: 66px;
+    height: 66px;
+    color: white;
+    background-image: url("sdsdsdsd.png");
+    font-size: 8px;
+    border-color: #fff;
+    border-width: 1px;
+    font-family: Verdana;
+}
+
+#main{
+    width: 800px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+#divled{
+margin-top: 20px;
+-webkit-border-top-left-radius: 20px;
+-webkit-border-bottom-left-radius: 20px;
+-moz-border-radius-topleft: 20px;
+-moz-border-radius-bottomleft: 20px;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+    background-color: #01DF85;
+    width: 400px;
+    height: 170px;
+    float: left;
+}
+#divquat{
+    margin-top: 20px;
+-webkit-border-top-right-radius: 20px;
+-webkit-border-bottom-right-radius: 20px;
+-moz-border-radius-topright: 20px;
+-moz-border-radius-bottomright: 20px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+    background-color: #01DF85;
+    width: 400px;
+    height: 170px;
+    float: left;
+}
+
+
+
+
+
+
+
+
+
+
+#divnhietdo{
+-webkit-border-top-left-radius: 20px;
+-webkit-border-bottom-left-radius: 20px;
+-moz-border-radius-topleft: 20px;
+-moz-border-radius-bottomleft: 20px;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+    background-color: #F8F8FF;
+    width: 400px;
+    height: 310px;
+    float: left;
+}
+#divdoam{
+    -webkit-border-top-right-radius: 20px;
+-webkit-border-bottom-right-radius: 20px;
+-moz-border-radius-topright: 20px;
+-moz-border-radius-bottomright: 20px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+    background-color: #F8F8FF;
+    width: 400px;
+    height: 310px;
+    float: left;
+}
+
+
+
+/*===================================================*/
+
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+/*===================================================*/
+.progress-pie-chart {
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #E5E5E5;
+    position: relative;
+    }
+    .progress-pie-chart.gt-50 {
+    background-color: rgb(243, 48, 22);
+    }
+    
+    .ppc-progress {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50% - 100px);
+    top: calc(50% - 100px);
+    width: 200px;
+    height: 200px;
+    clip: rect(0, 200px, 200px, 100px);
+    }
+    .ppc-progress .ppc-progress-fill {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50% - 100px);
+    top: calc(50% - 100px);
+    width: 200px;
+    height: 200px;
+    clip: rect(0, 100px, 200px, 0);
+    background: rgb(219, 84, 60);
+    transform: rotate(60deg);
+    }
+    .gt-50 .ppc-progress {
+    clip: rect(0, 100px, 200px, 0);
+    }
+    .gt-50 .ppc-progress .ppc-progress-fill {
+    clip: rect(0, 200px, 200px, 100px);
+    background: #E5E5E5;
+    }
+    
+    .ppc-percents {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50% - 173.91304px/2);
+    top: calc(50% - 173.91304px/2);
+    width: 173.91304px;
+    height: 173.91304px;
+    background: #fff;
+    text-align: center;
+    display: table;
+    }
+    .ppc-percents .nhietdo2 {
+    display: block;
+    font-size: 2.6em;
+    font-weight: bold;
+    color: rgb(219, 84, 60);
+    }
+    
+    .pcc-percents-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    }
+    
+    .progress-pie-chart {
+    margin: 10px auto 0;
+    }
+
+
+  
+    .progress-pie-chart2 {
+        width:200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #E5E5E5;
+        position: relative;
+        }
+        .progress-pie-chart2.gt-50 {
+        background-color: rgb(71, 156, 224);
+        }
+        
+        .ppc-progress2 {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        left: calc(50% - 100px);
+        top: calc(50% - 100px);
+        width: 200px;
+        height: 200px;
+        clip: rect(0, 200px, 200px, 100px);
+        }
+        .ppc-progress2 .ppc-progress-fill2 {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        left: calc(50% - 100px);
+        top: calc(50% - 100px);
+        width: 200px;
+        height: 200px;
+        clip: rect(0, 100px, 200px, 0);
+        background: rgb(71, 156, 224);
+        transform: rotate(60deg);
+        }
+        .gt-50 .ppc-progress2 {
+        clip: rect(0, 100px, 200px, 0);
+        }
+        .gt-50 .ppc-progress2 .ppc-progress-fill2 {
+        clip: rect(0, 200px, 200px, 100px);
+        background: #E5E5E5;
+        }
+        
+        .ppc-percents2 {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        left: calc(50% - 173.91304px/2);
+        top: calc(50% - 173.91304px/2);
+        width: 173.91304px;
+        height: 173.91304px;
+        background: #fff;
+        text-align: center;
+        display: table;
+        }
+        .ppc-percents2 .doam2 {
+        display: block;
+        font-size: 2.6em;
+        font-weight: bold;
+        color: rgb(71, 156, 224);
+        }
+        
+        .pcc-percents-wrapper2 {
+        display: table-cell;
+        vertical-align: middle;
+        }
+        
+        .progress-pie-chart2 {
+        margin: 10px auto 0;
+        }
+
+

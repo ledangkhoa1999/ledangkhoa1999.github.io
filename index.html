@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script src="script.js"></script>
+
+ 
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div id="main">
+    <div id="divnhietdo">
+      <h1 style="color: darkgrey">Nhiệt Độ</h1>
+      <div class="bar_container">
+        <div id="main_container">
+          <div id="pbar" class="progress-pie-chart" data-percent="0">
+            <div class="ppc-progress">
+              <div class="ppc-progress-fill"></div>
+            </div>
+            <div class="ppc-percents">
+              <div class="pcc-percents-wrapper">
+                <span class="nhietdo2">%</span>
+              </div>
+            </div>
+          </div>
+          <progress style="display: none" id="progress_bar" value="0" max="100"></progress>
+        </div>
+      </div>
+    </div>
+    <div id="divdoam">
+      <h1 style="color: darkgrey">Độ Ẩm</h1>
+      <div class="bar_container2">
+        <div id="main_container2">
+          <div id="pbar2" class="progress-pie-chart2" data-percent2="0">
+            <div class="ppc-progress2">
+              <div class="ppc-progress-fill2"></div>
+            </div>
+            <div class="ppc-percents2">
+              <div class="pcc-percents-wrapper2">
+                <span class="doam2">%</span2>
+              </div>
+            </div>
+          </div>
+          <progress style="display: none" id="progress_bar2" value2="0" max2="100"></progress>
+        </div>
+      </div>
+    </div>
+
+    <div id="divled">
+      <h1 class="den" style="color: ghostwhite">Tải Trạng Thái....!!!</h1>
+      <!-- Rounded switch -->
+      <label class="switch">
+        <input class="bt1" name="foo1" type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <div id="divquat">
+      <h1 class="quat" style="color: ghostwhite">Tải Trạng Thái....!!!</h1>
+      <!-- Rounded switch -->
+      <label class="switch">
+        <input class="bt" name="foo" type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+</body>
+
+</html>
