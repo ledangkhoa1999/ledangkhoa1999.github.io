@@ -18,10 +18,10 @@ $(document).ready(function () {
   database.ref().on("value", function (snap) {
     LED_STATUS = snap.val().LED_STATUS;
     if (LED_STATUS == 1) {
-      $(".den").text("Bật Đèn");
+      $(".den").text("Bật Đèn phòng khách");
       $('input[name=foo1]').attr('checked', true);
     } else {
-      $(".den").text("Tắt Đèn");
+      $(".den").text("Tắt Đèn phòng khách");
       $('input[name=foo1]').attr('checked', false);
     }
   });
@@ -72,6 +72,69 @@ $(document).ready(function () {
 });
 //=============Fan========================
 
+//=============Door========================
+$(document).ready(function () {
+  var database = firebase.database();
+  var DOOR_STATUS;
+  database.ref().on("value", function (snap) {
+    DOOR_STATUS = snap.val().DOOR_STATUS;
+    if (DOOR_STATUS == "1") {
+      $(".door").text("Mở cửa");
+      $('input[name=foodoor]').attr('checked', true);
+    } else {
+      $(".door").text("Đóng cửa");
+      $('input[name=foodoor]').attr('checked', false);
+    }
+
+
+  });
+
+
+  $(".btdoor").click(function () {
+    var firebaseRef = firebase.database().ref().child("DOOR_STATUS");
+
+    if (DOOR_STATUS == "1") {
+      firebaseRef.set("0");
+      DOOR_STATUS = "0";
+    } else {
+      firebaseRef.set("1");
+      DOOR_STATUS = "1";
+    }
+  })
+});
+//=============Door========================
+
+//=============LEDPHONG========================
+$(document).ready(function () {
+  var database = firebase.database();
+  var LEDPHONG_STATUS;
+  database.ref().on("value", function (snap) {
+    LEDPHONG_STATUS = snap.val().LEDPHONG_STATUS;
+    if (LEDPHONG_STATUS == "1") {
+      $(".ledphong").text("Bật đèn phòng ngủ");
+      $('input[name=fooledphong]').attr('checked', true);
+    } else {
+      $(".ledphong").text("Tắt đèn phòng ngủ");
+      $('input[name=fooledphong]').attr('checked', false);
+    }
+
+
+  });
+
+
+  $(".btledphong").click(function () {
+    var firebaseRef = firebase.database().ref().child("LEDPHONG_STATUS");
+
+    if (LEDPHONG_STATUS == "1") {
+      firebaseRef.set("0");
+      LEDPHONG_STATUS = "0";
+    } else {
+      firebaseRef.set("1");
+      LEDPHONG_STATUS = "1";
+    }
+  })
+});
+//=============LEDPHONG========================
 
 //================== Nhiet Do ==============================
 $(document).ready(function () {
