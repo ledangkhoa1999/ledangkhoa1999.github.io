@@ -311,12 +311,12 @@ border-bottom-right-radius: 20px;
     margin-right: auto;
 }
 	div#divnhietdo {
-    width: 100%;
+    width: 50%;
     border-radius: 0px;
 }
 	div#divdoam {
     border-radius: 0px;
-   width: 100%;
+   width: 50%;
 }
 	div#divled {
    width: 100%;
